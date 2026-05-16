@@ -44,6 +44,41 @@ graph LR
     C & D & E --> F[RAG 增強生成回答]
 ```
 
+## 🤖 MVP-C：MCP Multi-Agent 協作平台
+展示基於 LangGraph 的多 Agent 協作與狀態管理能力。
+
+```mermaid
+graph LR
+    User[使用者] --> Orchestrator[協作編排器]
+    Orchestrator --> Agent1[搜索 Agent]
+    Orchestrator --> Agent2[分析 Agent]
+    Orchestrator --> Agent3[寫作 Agent]
+    Agent1 & Agent2 & Agent3 --> Orchestrator
+    Orchestrator --> Output[最終回覆]
+```
+
+## 🎯 MVP-D：社群行銷自動化 Bot
+展示如何利用 Prompt Engineering 將品牌風格穩定地轉化為多平台的社群內容。
+
+```mermaid
+graph TD
+    Raw[原始題材] --> Style[品牌風格定義]
+    Style --> LLM[AI 文案生成]
+    LLM --> Format[社群媒體格式轉換]
+    Format --> Scheduler[自動化排程發布]
+```
+
+## ⚡ MVP-E：非同步推論排程器
+針對企業級高併發場景，優化模型推論的吞吐量與穩定性。
+
+```mermaid
+graph LR
+    Req[多個併發請求] --> Queue[非同步任務隊列]
+    Queue --> Batch[批次處理單元]
+    Batch --> Model[AI 模型推論]
+    Model --> Res[回傳結果]
+```
+
 ---
 
 ## 🛠️ 執行與部署 (Technical Setup)
