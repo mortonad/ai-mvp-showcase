@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+gradio
+langchain
+langchain-openai
+python-dotenv
