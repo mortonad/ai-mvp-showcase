@@ -1,6 +1,6 @@
 # 🤖 AI MVP Showcase Portfolio
 
-> **專案定位**：這是我在過去 730 天中，針對不同產業痛點開發的 5 個 AI 核心原型 (PoC)。
+> **專案定位**：這是我在過去 730 天中，針對不同產業痛點開發的 6 個 AI 核心原型 (PoC)。
 > 
 > 展示 **Agentic AI**、**Multi-RAG**、**MCP 協議**與**非同步推論**等前沿技術的落地實踐。
 
@@ -17,6 +17,7 @@
 | **🤖 MCP Agent** | LangGraph + MCP | 多 Agent 協作與工具調用規範 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mortonad/ai-mvp-showcase/blob/main/Showcase_MVP_C_MCP_MultiAgent/MVP-C_MCP_MultiAgent核心概念.ipynb) |
 | **🎯 MarketingBot** | Prompt Eng. | 社群媒體文案自動化與排程 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mortonad/ai-mvp-showcase/blob/main/Showcase_MVP_D_MarketingBot/MVP-D_社群行銷自動化Bot.ipynb) |
 | **⚡ AsyncInfer** | AsyncIO + Queue | 高併發環境下的模型推論優化 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mortonad/ai-mvp-showcase/blob/main/Showcase_MVP_E_AsyncInference/MVP-E_非同步推論排程器.ipynb) |
+| **💬 MeetingEngine** | GCP STT + LINE Bot | 語音轉文字 + AI 會議摘要 + LINE Bot 整合 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mortonad/ai-mvp-showcase/blob/main/Showcase_MVP_F_MeetingAutoEngine/MVP-F_會議AI引擎.ipynb) |
 
 ---
 
@@ -77,6 +78,18 @@ graph LR
     Queue --> Batch[批次處理單元]
     Batch --> Model[AI 模型推論]
     Model --> Res[回傳結果]
+```
+
+## 💬 MVP-F：會議 AI 引擎
+展示語音轉文字（STT）+ AI 會議摘要 + LINE Bot 整合的完整解決方案。
+
+```mermaid
+graph TD
+    Audio[會議錄音] --> STT[GCP STT API]
+    STT --> Transcript[文字轉錄]
+    Transcript --> Summary[AI 會議摘要]
+    Summary --> LINE[LINE Bot 通知]
+    Summary --> Email[Email 發送]
 ```
 
 ---
